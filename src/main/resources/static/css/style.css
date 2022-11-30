@@ -24,3 +24,12 @@ body {
 .btn {
   margin:5%;
 }
+
+#add {
+  margin: 0% !important;
+  width: 100%;
+}
+
+.no-margin {
+  margin: 2% !important;
+}

@@ -26,6 +26,8 @@
           $('.tabs').tabs();
           $('.modal').modal();
           $('.fixed-action-btn').floatingActionButton();
+          $('select').formSelect();
+          $('.dropdown-trigger').dropdown();
         });
 
         function maxLengthCheck(obj){
@@ -39,11 +41,9 @@
     <th:block layout:fragment="header" th:include="@{/header}"></th:block>
 
     <div layout:fragment="content" class="content container">
-      <h2>content here</h2>
-      <h3>[[${type}]]</h3>
 
       <div id="main" class="col s12">
-        nothing
+          <div th:replace="~{/fragments :: fragment-fav}"></div>
       </div>
 
       <div id="board" class="col s12">
