@@ -21,6 +21,9 @@
     <!--Custom CSS-->
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
 
+    <!-- Google Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script th:inline="javascript">
         $(document).ready(function(){
           $('.tabs').tabs();
@@ -35,6 +38,7 @@
                 obj.value = obj.value.slice(0, obj.maxLength);
         }
     </script>
+
   </th:block>
 
   <body>
@@ -47,18 +51,21 @@
       </div>
 
       <div id="board" class="col s12">
+          <div th:replace="~{/fragments :: fragment-history}"></div>
 <!--        <th:block th:if="${type}=='board'">-->
-          <div th:replace="~{/fragments :: fragment-main}"></div>
+<!--          <div th:replace="~{/fragments :: fragment-main}"></div>-->
 <!--        </th:block>-->
       </div>
       <div id="stock" class="col s12">
+          <div th:replace="~{/fragments :: fragment-possessed}"></div>
 <!--        <th:block th:if="${type}=='stock'">-->
-          <div th:replace="~{/fragments :: fragment-test2}"></div>
+<!--          <div th:replace="~{/fragments :: fragment-test2}"></div>-->
 <!--        </th:block>-->
       </div>
       <div id="holding" class="col s12">
+          <div th:replace="~{/fragments :: fragment-market}"></div>
 <!--        <th:block th:if="${type}=='holding'">-->
-          <div th:replace="~{/fragments :: fragment-test3}"></div>
+<!--          <div th:replace="~{/fragments :: fragment-test3}"></div>-->
 <!--        </th:block>-->
       </div>
       <div id="fav" class="col s12">
